@@ -1,0 +1,5 @@
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\Infrastructure\bin\Debug\netcoreapp2.2\Infrastructure.deps.json
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\Infrastructure\bin\Debug\netcoreapp2.2\Infrastructure.dll
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.csproj.CoreCompileInputs.cache
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.AssemblyInfoInputs.cache
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.AssemblyInfo.cs

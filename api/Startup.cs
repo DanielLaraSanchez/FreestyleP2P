@@ -13,7 +13,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 
 
-namespace api
+namespace API
 {
     public class Startup
     {

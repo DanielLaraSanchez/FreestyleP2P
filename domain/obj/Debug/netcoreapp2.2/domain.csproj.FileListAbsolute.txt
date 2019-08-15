@@ -7,3 +7,12 @@ C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\domain\obj\Debu
 C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.AssemblyInfo.cs
 C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.dll
 C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.pdb
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\bin\Debug\netcoreapp2.2\domain.deps.json
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\bin\Debug\netcoreapp2.2\domain.dll
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\bin\Debug\netcoreapp2.2\domain.pdb
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.csprojAssemblyReference.cache
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.csproj.CoreCompileInputs.cache
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.AssemblyInfoInputs.cache
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.AssemblyInfo.cs
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.dll
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.pdb

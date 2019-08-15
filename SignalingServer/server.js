@@ -9,10 +9,12 @@ const io = ioSocket(server)
 
 app.use(express.static('client'));
 
-
+app.get('/chat', function(req, res){
     ioSocket(server).emit("chat", req.params.params)
-    
+
 })
+    
+
 
 io.on('connection', function(socket){
     console.log('a user connected');
