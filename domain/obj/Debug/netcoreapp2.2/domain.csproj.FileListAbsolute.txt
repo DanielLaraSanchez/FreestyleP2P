@@ -1,12 +1,3 @@
-C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\domain\bin\Debug\netcoreapp2.2\domain.deps.json
-C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\domain\bin\Debug\netcoreapp2.2\domain.dll
-C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\domain\bin\Debug\netcoreapp2.2\domain.pdb
-C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.csprojAssemblyReference.cache
-C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.csproj.CoreCompileInputs.cache
-C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.AssemblyInfoInputs.cache
-C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.AssemblyInfo.cs
-C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.dll
-C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.pdb
 C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\bin\Debug\netcoreapp2.2\domain.deps.json
 C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\bin\Debug\netcoreapp2.2\domain.dll
 C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\bin\Debug\netcoreapp2.2\domain.pdb
@@ -16,3 +7,11 @@ C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\d
 C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.AssemblyInfo.cs
 C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.dll
 C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\domain\obj\Debug\netcoreapp2.2\domain.pdb
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\bin\Debug\netcoreapp2.2\Domain.deps.json
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\bin\Debug\netcoreapp2.2\Domain.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debug\netcoreapp2.2\Domain.csproj.CoreCompileInputs.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfoInputs.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfo.cs
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debug\netcoreapp2.2\Domain.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debug\netcoreapp2.2\Domain.pdb

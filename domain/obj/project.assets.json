@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CranewareRepositoriesALL\\PersonalDevelopment\\CoachingWithAlvin\\FreestyleP2P\\domain\\domain.csproj",
-      "projectName": "domain",
-      "projectPath": "C:\\CranewareRepositoriesALL\\PersonalDevelopment\\CoachingWithAlvin\\FreestyleP2P\\domain\\domain.csproj",
+      "projectUniqueName": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\Domain.csproj",
+      "projectName": "Domain",
+      "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Daniel Lara\\.nuget\\packages\\",
-      "outputPath": "C:\\CranewareRepositoriesALL\\PersonalDevelopment\\CoachingWithAlvin\\FreestyleP2P\\domain\\obj\\",
+      "outputPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -709,13 +709,8 @@
         "netcoreapp2.2"
       ],
       "sources": {
-        "C:\\": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "\\\\pse-build01\\wwwroot\\nuget-repo-dev\\Packages": {},
-        "\\\\pse-build01\\wwwroot\\nuget-repo\\Packages": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://tfs:444/tfs/Common/_packaging/TrisusNuget/nuget/v3/index.json": {},
-        "https://www.nuget.org/api/v2": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
