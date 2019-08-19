@@ -130,6 +130,24 @@ function makeUserListMessage() {
     return userListMsg;
 }
 
+function myMakeUserListMessage() {
+    var userListMsg = {
+        type: "userlist",
+        users: []
+    };
+    var i;
+
+    // Add the users to the list
+
+    for (i = 0; i < connectionArray.length; i++) {
+        userListMsg.users.push(JSON.stringify(connectionArray[i]));
+    }
+
+    return userListMsg;
+}
+
+
+
 // Sends a "userlist" message to all chat members. This is a cheesy way
 // to ensure that every join/drop is reflected everywhere. It would be more
 // efficient to send simple join/drop messages to each user, but this is
@@ -143,6 +161,8 @@ function sendUserListToAll() {
         connectionArray[i].sendUTF(userListMsgStr);
     }
 }
+
+
 
 // Load the key and certificate data to be used for our HTTPS/WSS
 // server.
@@ -197,23 +217,27 @@ wsServer.on('request', function (request) {
     // Accept the request and get a connection.
 
     var connection = request.accept("json", request.origin);
+    
 
     // Add the new connection to our list of connections.
-
     log("Connection accepted from " + connection.remoteAddress + ".");
     connectionArray.push(connection);
 
     connection.clientID = nextID;
     nextID++;
-
     // Send the new client its token; it send back a "username" message to
     // tell us what username they want to use.
 
     var msg = {
         type: "id",
-        id: connection.clientID
+        id: connection.clientID,
+        username: "hello",
+        test:"test"
     };
+
     connection.sendUTF(JSON.stringify(msg));
+    
+
 
     // Set up a handler for the "message" event received over WebSocket. This
     // is a message sent by a client, and may be text to share with other
@@ -323,4 +347,12 @@ wsServer.on('request', function (request) {
         logMessage += ")";
         log(logMessage);
     });
+
+   
 });
+
+function sendUserListToFrontEnd(){
+    var userListMsg = makeUserListMessage();
+    var userListMsgStr = JSON.stringify(userListMsg);
+    return userListMsgStr
+}

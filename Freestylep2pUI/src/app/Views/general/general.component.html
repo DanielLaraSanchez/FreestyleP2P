@@ -1,20 +1,41 @@
-<p>
-  general works!
-</p>
+<div id="wrapper">
 
 
-      <app-usercard></app-usercard>
-   
+<div class="container-fluid" id="header-background-container">
 
-
-
-<h3>Raised Buttons</h3>
-<div class="example-button-row">
-  <button mat-raised-button>Basic</button>
-  <button mat-raised-button color="primary">Primary</button>
-  <button mat-raised-button color="accent">Accent</button>
-  <button mat-raised-button color="warn">Warn</button>
-  <button mat-raised-button disabled>Disabled</button>
-  <a mat-raised-button routerLink=".">Link</a>
 </div>
+
+<div class="container" id="online-users-container">
+  <div class="row" id="online-user-row">
+
+    <div class="col-lg-1" *ngFor="let user of getUsers()" id="online-user-col">
+      <div class="row justify-content-center">
+          <img src="../../../assets/Images/maleUser.png" height="30px" alt="Smiley face">
+      </div>
+      <div class="row justify-content-center">
+          {{user.Name}}
+      </div>
+    </div>
+
+  </div>
+  
+</div>
+
+<div class="container-fluid" id="button-battle-container">
+  <div class="row justify-content-end">
+    <div class="col-lg-2">
+        <button mat-raised-button (click)="startBattle()">Start Battle</button>
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<button mat-raised-button (click)="connectToSignalingServer()">connect to signalingserver</button>
+
+
+
 
