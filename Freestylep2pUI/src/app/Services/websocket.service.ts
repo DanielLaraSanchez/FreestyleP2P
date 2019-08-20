@@ -30,7 +30,11 @@ export class WebsocketService {
         ws.onclose = obs.complete.bind(obs);
         return ws.close.bind(ws);
       }
-    )
+    ) 
+
+    ws.addEventListener("message", function(data){
+      console.log(data, "data")
+    })
 
     let observer = {
       next: (data: Object) => {
@@ -40,9 +44,18 @@ export class WebsocketService {
       }
     }
 
-   
+  
 
     return Rx.Subject.create(observer, observable)
+  }
+
+  public getUserList(){
+    
+     this.subject.subscribe(x => {
+       x.initEvent("message", false)
+     })
+
+     return this.subject
   }
 
  

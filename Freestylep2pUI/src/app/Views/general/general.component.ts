@@ -27,7 +27,9 @@ export class GeneralComponent implements OnInit {
 
   public connectToSignalingServer(){
     this._websocketService.connect().subscribe(x =>{
-      console.log(x);
+    })
+    this._websocketService.getUserList().subscribe(x => {
+      console.log(x, "subject")
     })
   }
 

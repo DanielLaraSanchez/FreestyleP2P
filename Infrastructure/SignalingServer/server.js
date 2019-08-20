@@ -222,7 +222,6 @@ wsServer.on('request', function (request) {
     // Add the new connection to our list of connections.
     log("Connection accepted from " + connection.remoteAddress + ".");
     connectionArray.push(connection);
-
     connection.clientID = nextID;
     nextID++;
     // Send the new client its token; it send back a "username" message to
@@ -230,12 +229,11 @@ wsServer.on('request', function (request) {
 
     var msg = {
         type: "id",
-        id: connection.clientID,
-        username: "hello",
-        test:"test"
+        id: connection.clientID
     };
 
     connection.sendUTF(JSON.stringify(msg));
+    
     
 
 
