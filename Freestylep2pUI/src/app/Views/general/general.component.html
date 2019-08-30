@@ -8,12 +8,12 @@
 <div class="container" id="online-users-container">
   <div class="row" id="online-user-row">
 
-    <div class="col-lg-1" *ngFor="let user of getUsers()" id="online-user-col">
+    <div class="col-lg-1"  id="online-user-col">
       <div class="row justify-content-center">
           <img src="../../../assets/Images/maleUser.png" height="30px" alt="Smiley face">
       </div>
       <div class="row justify-content-center">
-          {{user.Name}}
+          <!-- {{user.Name}} -->
       </div>
     </div>
 
@@ -25,6 +25,8 @@
   <div class="row justify-content-end">
     <div class="col-lg-2">
         <button mat-raised-button (click)="startBattle()">Start Battle</button>
+        <button mat-raised-button (click)="nextPage()">Go to next Page</button>
+
 
     </div>
   </div>

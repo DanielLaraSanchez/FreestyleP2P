@@ -1,0 +1,8 @@
+#container{
+    height:100vh;
+    background-image: url("../../../assets/micscover.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
