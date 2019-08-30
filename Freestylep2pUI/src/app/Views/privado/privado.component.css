@@ -1,9 +1,16 @@
 
+html { 
 
+    background: url("../../../assets/micscover2.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
 #container{
     height:100vh;
-    background-image: url("../../../assets/micscover2.jpg");
+    background: url("../../../assets/micscover2.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -16,11 +23,12 @@
 }
 
 #col{
-    height:850px;
-background-color:lightgrey;
+height:850px;
+background-color:white;
 opacity: 0.1;
 filter: alpha(opacity=70);
 border-radius:5%;
+
 
 }
 
