@@ -7,15 +7,23 @@ import { PrivadoComponent } from './Views/privado/privado.component';
 import { GeneralComponent } from './Views/general/general.component';
 import { HomeComponent } from './Views/home/home.component';
 import { UsercardComponent } from './Components/usercard/usercard.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 //Material 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatStepperModule} from '@angular/material/stepper';
 import { LoginComponent } from './Views/login/login.component';
 import { SignupComponent } from './Views/signup/signup.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
+import {MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -34,12 +42,23 @@ import { SignupComponent } from './Views/signup/signup.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     //Material
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    MatStepperModule
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatTableModule
+
+
+    
   ],
+  entryComponents: [LoginComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
