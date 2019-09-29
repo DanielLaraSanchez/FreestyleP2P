@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrivadoComponent } from './Views/privado/privado.component';
 import { GeneralComponent } from './Views/general/general.component';
-import { HomeComponent } from './Views/home/home.component';
 import { UsercardComponent } from './Components/usercard/usercard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 //Material 
@@ -24,6 +24,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -34,7 +35,6 @@ import {MatSelectModule} from '@angular/material/select';
     AppComponent,
     PrivadoComponent,
     GeneralComponent,
-    HomeComponent,
     UsercardComponent,
     LoginComponent,
     SignupComponent
@@ -44,6 +44,7 @@ import {MatSelectModule} from '@angular/material/select';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     //Material
     BrowserAnimationsModule,
     MatCardModule,

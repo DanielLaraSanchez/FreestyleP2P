@@ -4,7 +4,7 @@ public Name: string;
 public EmailAddress: string;
 public Password: string;
 public Token?: string;
-public Points: number;
+public Points?: number;
 
 }
 

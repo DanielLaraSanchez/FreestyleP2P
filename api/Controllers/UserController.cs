@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Infrastructure.DataLayer.Interfaces;
+using Infrastructure.DataLayer.Entities;
+using API.Requests;
 
 namespace API.Controllers
 {
@@ -11,24 +14,42 @@ namespace API.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        // GET: api/User
-        [HttpGet]
-        public IEnumerable<string> Get()
+
+        public IRepository _repository;
+        public UserController(IRepository repository)
         {
-            return new string[] { "value1", "value2" };
+            _repository = repository;
+
+        }
+        // GET: api/User
+        [HttpGet("get")]
+        public async Task<ActionResult> Get()
+        {
+            return new OkObjectResult (await  _repository.GetAll());
         }
 
         // GET: api/User/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public async Task<ActionResult> Get(int id)
         {
-            return "value";
+            var user = await _repository.Get(id);
+            return new OkObjectResult(user);
         }
 
         // POST: api/User
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("addUser")]
+        public async Task<ActionResult> AddUser([FromBody] UserRequest user)
         {
+            User newUser = new User()
+            {
+                Name = user.Name,
+                EmailAddress = user.EmailAddress,
+                Password = user.Password,
+                Points = user.Points
+            };
+
+            await _repository.AddUser(newUser.Name, newUser.EmailAddress, newUser.Password);
+            return Ok(newUser);
         }
 
         // PUT: api/User/5
@@ -39,8 +60,10 @@ namespace API.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
+            await _repository.DeleteUser(id);
+            return Ok();
         }
     }
 }

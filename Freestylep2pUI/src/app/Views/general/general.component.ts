@@ -10,12 +10,17 @@ import { WebsocketService } from 'src/app/Services/websocket.service';
   templateUrl: './general.component.html',
   styleUrls: ['./general.component.css']
 })
+
 export class GeneralComponent implements OnInit {
-  constructor(public _webSocketService: WebsocketService, public router: Router) { }
+  socket;
+  peersArray;
+  constructor(public _webSocketService: WebsocketService, public router: Router) {
+    this.socket = this._webSocketService.socket;
+   }
 
   ngOnInit() {
-
-    this.connect();
+// this.getPeersOnline();
+this.peersArray = this.getPeersOnline()
 
   }
 
@@ -23,60 +28,18 @@ export class GeneralComponent implements OnInit {
     this.router.navigate(['privado'])
   }
 
-
-  public async getWebCam(camSwitch) {
-    var constraints = { audio: false, video: { width: 1280, height: 720 } };
-    navigator.mediaDevices.getUserMedia(constraints)
-      .then(function (mediaStream) {
-          var video = document.querySelector('video');
-          video.srcObject = mediaStream;
-          console.log(mediaStream)
-          video.onloadedmetadata = function (e) {
-            video.play();
-
-
-            function initPeer(type){
-              // let peer = new Peer({initiator: (type == 'init') ? true : false, stream: mediaStream})
-            }
-
-          };
-        
-      })
-      .catch(function (err) { console.log(err.name + ": " + err.message); });
-  }
-
-  connect() {
-    this.connectWithServer();
-    this.listenForDisconnections();
-    this.getUserListOnConnection();
-    this.getUserListOnDisconnection();
+  getPeersOnline(){
+    let arrayOfPeers;
+    this._webSocketService.listen('getAllPeers').subscribe((data)=>{
+      console.log(data)
+      this.peersArray = data;
+      arrayOfPeers = data;
+    });
+    return arrayOfPeers;
   }
 
 
+ 
 
-  connectWithServer() {
-    //here we want to connect to the socket.io server
-    this._webSocketService.listen('connect').subscribe(data => {
-      this._webSocketService.setNickName("carapan");
-    })
-  }
-
-
-
-  getUserListOnConnection() {
-    this._webSocketService.listen('userslistonConnection').subscribe(data => {
-      console.log(data, "userlist")
-    })
-  }
-  getUserListOnDisconnection() {
-    this._webSocketService.listen('userslistonDisconnection').subscribe(data => {
-      console.log(data, "userlist")
-    })
-  }
-
-  listenForDisconnections() {
-    this._webSocketService.listen('disconnection').subscribe(data => {
-      console.log(data, "disconnection")
-    })
-  }
+ 
 }

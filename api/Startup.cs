@@ -11,6 +11,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Infrastructure.DataLayer;
+using Microsoft.EntityFrameworkCore;
+using Infrastructure.DataLayer.Interfaces;
+
 
 
 namespace API
@@ -27,6 +31,11 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<DatabaseContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:FreestyleP2PDB"]));
+            services.AddScoped<IRepository, UserRepository>();
+
+            services.AddCors();
+
             services.AddSpaStaticFiles(c =>
             {
                 c.RootPath = "Freestylep2pUI/dist";
@@ -37,6 +46,13 @@ namespace API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+
+            app.UseCors(builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+                
+            
             app.UseSpaStaticFiles();
 
             if (env.IsDevelopment())

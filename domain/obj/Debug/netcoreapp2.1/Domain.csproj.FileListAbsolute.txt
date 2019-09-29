@@ -1,0 +1,9 @@
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\bin\Debug\netcoreapp2.1\Domain.deps.json
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\bin\Debug\netcoreapp2.1\Domain.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\bin\Debug\netcoreapp2.1\Domain.pdb
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debug\netcoreapp2.1\Domain.csproj.CoreCompileInputs.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfoInputs.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfo.cs
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debug\netcoreapp2.1\Domain.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debug\netcoreapp2.1\Domain.pdb
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debug\netcoreapp2.1\Domain.csprojAssemblyReference.cache

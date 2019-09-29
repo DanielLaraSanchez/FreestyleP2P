@@ -3,77 +3,126 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
+let Peermoderator = require('./moderator.js');
+let BattleConnection = require('./battleconnection.js');
+let Peer = require('./peer.js');
 
-server.listen(3000, () => {
-    console.log("socket.io server is listening on port 3000");
-})
 
+
+
+let Moderator = new Peermoderator();
+let broadcaster;
 const clients = [];
-console.log('Currently there are ' + clients.length + ' connected');
+const activeConnections = [];
+let connectionsPairedUp = [];
 
-io.on('connect', function (socket) {
-    var newUserObject = {
-        id: socket.id,
-        nickname: null
+
+
+io.sockets.on('connection', function (socket) {
+  let peer = new Peer();
+  peer.socketid = socket.id;
+  clients.push(peer);
+  socket.broadcast.emit('getAllPeers', clients);
+  socket.emit('getAllPeers', clients);
+
+
+  console.log('Currently there are ' + clients.length + ' connected', clients);
+
+  socket.on('readyToBattle', function (socketid) {
+    createConnections(socket.id);
+    ("funciona insidereadytobattle")
+    connectionsPairedUp = Moderator.getConnectionsPairedUp(activeConnections);
+    let peerHasAPair = Moderator.checkIfPeerIsInSpecificConnection(connectionsPairedUp, socketid)
+    if (connectionsPairedUp.length > 0 && peerHasAPair) {
+      connectionsPairedUp.forEach((conn) => {
+        if (conn.reciever === socketid || conn.sender === socketid) {
+          socket.to(conn.reciever).emit('onOffer', conn.sender);
+          socket.emit('onSendOffer', conn.reciever);
+          // connectionsPairedUp.splice(connectionsPairedUp.indexOf(conn), 1);
+        }
+      });
     }
-    addNewUsersToClientsArray(newUserObject)
-    var allConnectedClients = Object.keys(io.sockets.connected);
-    console.log("new user has connected, their Id is: " + socket.id + " #Currently there are " + clients.length + " users connected.")
-    socket.on('nickname', function (nickname) {
-        socket.nickname = nickname;
-        newUserObject.nickname = nickname
-        io.emit('userslistonConnection', clients)
-    });
-    socket.on('disconnect', function () {
-        removeClientThatDisconnected(socket.id)
-        console.log("new user has disconnected, their Id is: " + socket.id + " #Currently there are " + clients.length + " users connected.", 36)
-        io.emit('userslistonDisconnection', clients)
-    });
+  });
+  socket.on('broadcaster', function () {
+    broadcaster = socket.id;
+    socket.broadcast.emit('broadcaster');
+  });
 
+  socket.on('watcher', function () {
+    socket.to(broadcaster).emit('watcher', socket.id);
+  });
+  socket.on('offer', function (id /* of the watcher */, message) {
+    if (id != socket.id) {
+      socket.to(id).emit('offer', socket.id /* of the broadcaster */, message);
+    }
+  });
+  socket.on('answer', function (id /* of the broadcaster */, message) {
+    socket.to(id).emit('answer', socket.id /* of the watcher */, message);
+  });
+  socket.on('candidate', function (id, message) {
+    if (id != socket.id) {
+      socket.to(id).emit('candidate', socket.id, message);
 
+    }
+  });
+  socket.on('disconnect', function (message) {
+    let partnerId = Moderator.findPartner(connectionsPairedUp, socket.id);
+    console.log(partnerId, "partner id")
+    io.sockets.to(partnerId).emit('bye', socket.id);
+    Moderator.deletePeerOnDisconnection(clients, socket.id);
+    Moderator.deletePeerFromConnection(activeConnections, socket.id);
+    Moderator.deleteConnectionWhenEmpty(activeConnections);
+    Moderator.pairUpAfterDisconnection(activeConnections);
+    console.log(activeConnections, "activeconnections on disconnect")
+    socket.broadcast.emit('getAllPeers', clients);
+    socket.emit('getAllPeers', clients);
+    connectionsPairedUp = Moderator.getConnectionsPairedUp(activeConnections)
+    console.log(activeConnections, "activeconnections on disconnect after getconnectionspairedup")
+    socket.emit('bye', socket.id)
+    // console.log("client" + socket.id, "has disconnected, currently there are", clients.length, "connected")
+  });
 
+  socket.on('imfree', (freePeerId) => {
+    Moderator.deletePeerFromConnection(activeConnections, freePeerId);
+    Moderator.deleteConnectionWhenEmpty(activeConnections);
+    Moderator.pairUpAfterDisconnection(activeConnections);
+    // connectionsPairedUp = Moderator.getConnectionsPairedUp(activeConnections)
+  })
 
-
-
-
-
+  socket.on('bye', function (id) {
+    console.log(id, "id on bye")
+    broadcaster && socket.to(broadcaster).emit('bye', id);
+    Moderator.pairUpAfterDisconnection(activeConnections);
+  });
 });
 
 
-
-
-//TOOLS         
-
-var removeClientThatDisconnected = function (id) {
-    if(clients.length === 1){
-        clients.pop();
-    }else{
-        clients.forEach(function (client) {
-            console.log(client.id, id)
-            if (client.id === id) {
-                clients.splice(client, 1)
-            }
-        });
+///tools
+function createConnections(socketid) {
+  let connectionId;
+  if (activeConnections.length === 0) {
+    let conn = new BattleConnection();
+    conn.reciever = socketid;
+    activeConnections.push(conn)
+    connectionId = conn.id;
+  } else {
+    let isPeerAlreadyInConnection = Moderator.checkIfClientIsAlreadyInConnection(activeConnections, socketid);
+    let connWaiting = Moderator.getConnectionWaiting(activeConnections)
+    if (!isPeerAlreadyInConnection && !connWaiting) {
+      let conn = new BattleConnection();
+      conn.reciever = socketid;
+      activeConnections.push(conn);
+      connectionId = conn.id;
+    } else if (!isPeerAlreadyInConnection && connWaiting) {
+      Moderator.insertPeerInConnection(activeConnections, connWaiting, socketid)
+      connectionId = connWaiting;
     }
-}
-
-var addNewUsersToClientsArray = function (newClient) {
-    if (clients.length === 0) {
-        clients.push(newClient)
-    } else {
-        var counter = 0;
-        clients.forEach(function (client) {
-            if (client.id === newClient.id) {
-                counter++
-            }
-        })
-    }if(counter === 0){
-        clients.push(newClient)
-
-    }
+  }
+  return connectionId;
 }
 
 
 
-
-
+server.listen(3000, () => {
+  console.log("socket.io server is listening on port 3000");
+});

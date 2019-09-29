@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.DataLayer.Interfaces
 {
-    interface IRepository
+    public interface IRepository
     {
         Task<User> Get(long id);
         Task<IEnumerable<User>> GetAll();

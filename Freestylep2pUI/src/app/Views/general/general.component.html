@@ -8,12 +8,12 @@
 <div class="container" id="online-users-container">
   <div class="row" id="online-user-row">
 
-    <div class="col-lg-1"  id="online-user-col">
-      <div class="row justify-content-center">
-          <img src="../../../assets/Images/maleUser.png" height="30px" alt="Smiley face">
-      </div>
-      <div class="row justify-content-center">
-          <!-- {{user.Name}} -->
+    <div class="col-lg-12"  id="online-user-col">
+      <div class="row">
+        <div class="col text-center" *ngFor="let peer of this.peersArray">
+            <img src="../../../assets/Images/maleUser.png" height="30px" alt="Smiley face">
+           <p>{{peer.socketid}}</p>
+        </div>
       </div>
     </div>
 
@@ -33,7 +33,13 @@
 </div>
 </div>
 
-
+<!-- <div class="container" style="height:800px;width:800px;">
+  <div class="row">
+    <div class="col-lg-2"  *ngFor="let peer of this.peersArray"  >
+      <p>{{peer.socketid}}</p>
+    </div>
+  </div>
+</div> -->
 
 
 <button mat-raised-button (click)="connectToSignalingServer()">connect to signalingserver</button>

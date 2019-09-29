@@ -24,8 +24,8 @@ html {
 
 #col{
 height:850px;
-background-color:white;
-opacity: 0.1;
+/* background-color:white; */
+/* opacity: 0.1; */
 filter: alpha(opacity=70);
 border-radius:5%;
 
@@ -38,15 +38,13 @@ border-radius:5%;
 }
 
 #webCamCol1{
-background-color:black;
 height:50%;
-border-radius:25%;
+/* border-radius:25%; */
 }
 
 #webCamCol2{
-    background-color:black;
     height:50%;
-    border-radius:25%;
+    /* border-radius:25%; */
 
 
 }
