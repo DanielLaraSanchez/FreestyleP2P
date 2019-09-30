@@ -22,8 +22,17 @@ io.sockets.on('connection', function (socket) {
   let peer = new Peer();
   peer.socketid = socket.id;
   clients.push(peer);
-  socket.broadcast.emit('getAllPeers', clients);
-  socket.emit('getAllPeers', clients);
+  for(let i = 0; i < 10;i++){
+    clients.push(peer);
+  }
+  socket.on('setnickname', function(nickname){
+    setNickname(socket.id, nickname);
+    socket.emit('getAllPeers', clients);
+    socket.broadcast.emit('getAllPeers', clients);
+  });
+ 
+
+ 
 
 
   console.log('Currently there are ' + clients.length + ' connected', clients);
@@ -79,6 +88,7 @@ io.sockets.on('connection', function (socket) {
     connectionsPairedUp = Moderator.getConnectionsPairedUp(activeConnections)
     console.log(activeConnections, "activeconnections on disconnect after getconnectionspairedup")
     socket.emit('bye', socket.id)
+    socket.broadcast.emit('getAllPeers', clients )
     // console.log("client" + socket.id, "has disconnected, currently there are", clients.length, "connected")
   });
 
@@ -92,6 +102,7 @@ io.sockets.on('connection', function (socket) {
   socket.on('bye', function (id) {
     console.log(id, "id on bye")
     broadcaster && socket.to(broadcaster).emit('bye', id);
+    // socket.broadcast.emit('bye');
     Moderator.pairUpAfterDisconnection(activeConnections);
   });
 });
@@ -120,6 +131,16 @@ function createConnections(socketid) {
   }
   return connectionId;
 }
+
+
+function setNickname(socketid, nickname){
+  for(let i = 0; i < clients.length; i++){
+    if(clients[i].socketid === socketid){
+      clients[i].nickname = nickname
+    }
+  }
+}
+
 
 
 

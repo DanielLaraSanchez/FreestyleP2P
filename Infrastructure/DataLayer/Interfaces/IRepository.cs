@@ -12,5 +12,6 @@ namespace Infrastructure.DataLayer.Interfaces
         Task<IEnumerable<User>> GetAll();
         Task<User> AddUser(string name, string emailAddress, string password);
         Task<User> DeleteUser(long id);
+        Task<User> Login(string emailAddress, string password);
     }
 }

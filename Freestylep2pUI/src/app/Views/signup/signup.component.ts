@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { FormControl, Validators } from '@angular/forms';
 import { User } from 'src/app/Services/Models/userModel';
 import { DataService } from 'src/app/Services/data.service';
+import * as sweetAlert from 'sweetalert2'
+
 
 @Component({
   selector: 'app-signup',
@@ -10,6 +12,7 @@ import { DataService } from 'src/app/Services/data.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+  userDetails: Object;
 
   constructor(public router: Router, public _dataService: DataService) { }
 
@@ -27,12 +30,16 @@ export class SignupComponent implements OnInit {
   ]);
 
   ngOnInit() {
-   
+   this.resetLoginForm();
     
   }
 
   nextPage(){
     this.router.navigate(['general'])
+  }
+
+  goToLogin(){
+    this.router.navigate(['']);
   }
 
   signUp(){
@@ -41,8 +48,21 @@ export class SignupComponent implements OnInit {
     newUser.EmailAddress = this.emailFormControl.value;
     newUser.Password = this.passwordFormControl.value;
     this._dataService.createUser(newUser).subscribe(x => {
-      console.log(x);
+      if(x){
+        this.userDetails = x;
+        sessionStorage.setItem("userDetails", JSON.stringify(x));
+        this.router.navigate(['general']);
+      
+      }
     });
+  }
+
+  private resetLoginForm(){
+    this.emailFormControl.clearValidators();
+    this.passwordFormControl.clearValidators();
+    this.emailFormControl.reset();
+    this.passwordFormControl.reset();
+   
   }
 
 

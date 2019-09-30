@@ -20,6 +20,8 @@ export class GeneralComponent implements OnInit {
 
   ngOnInit() {
 // this.getPeersOnline();
+console.log(this.socket)
+this.setNickNameOnLogin();
 this.peersArray = this.getPeersOnline()
 
   }
@@ -36,6 +38,14 @@ this.peersArray = this.getPeersOnline()
       arrayOfPeers = data;
     });
     return arrayOfPeers;
+  }
+
+  setNickNameOnLogin(){
+    let userDetails = JSON.parse(sessionStorage.getItem('userDetails'));
+    let nickname: string = userDetails.name;
+
+    console.log(userDetails)
+    this.socket.emit('setnickname', nickname);
   }
 
 

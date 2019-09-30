@@ -56,5 +56,26 @@ namespace Infrastructure.DataLayer
             var users = await _context.Users.ToListAsync();
             return users.AsEnumerable();
         }
+
+        public async Task<User> Login(string email, string password)
+        {
+            User user = null;
+            try
+            {
+                user = await _context.Users.Where(x => x.EmailAddress == email).Where(x => x.Password == password).FirstOrDefaultAsync(); //or SingleAsync
+
+                if (user.EmailAddress != null)
+                {
+                    return user;
+                }
+
+            }
+            catch (NullReferenceException error)
+            {
+                Console.WriteLine(error.Message);
+            }
+
+            return user;
+        }
     }
 }

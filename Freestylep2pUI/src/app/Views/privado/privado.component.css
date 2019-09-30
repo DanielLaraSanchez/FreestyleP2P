@@ -23,7 +23,7 @@ html {
 }
 
 #col{
-height:850px;
+/* height:850px; */
 /* background-color:white; */
 /* opacity: 0.1; */
 filter: alpha(opacity=70);
@@ -34,6 +34,8 @@ border-radius:5%;
 
 #webCamRow{
     height:100%;
+    margin-right:120px;
+
 
 }
 

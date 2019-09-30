@@ -65,5 +65,13 @@ namespace API.Controllers
             await _repository.DeleteUser(id);
             return Ok();
         }
+
+        [HttpPost("login")]
+        public async Task<ActionResult> Login(UserRequest user)
+        {
+            User foundUser =await _repository.Login(user.EmailAddress, user.Password);
+            
+            return Ok(foundUser);
+        }
     }
 }

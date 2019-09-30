@@ -106,7 +106,9 @@ position: absolute;
 }
 
 #row-login-text{
-    height:300px;
+    height:100px;
+    margin-top:50px;
+    margin-bottom:0px;
 }
 
 #row-login-form{

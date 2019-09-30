@@ -1,37 +1,21 @@
-#wrapper{
-    height:100vh;
-    background-color:grey;
-}
-
-#header-background-container{
-    height:700px;
-    background-color:grey;
-    background-size: contain;
-        background-repeat: no-repeat;
-
-}
-
-
-
-
 #online-users-container{
-    margin-right:90px;
-    background-color:white;
     border:1px solid black;
     padding:20px;
-    position: absolute;
-    right:0;
-    bottom:300px;
+    margin-top:150px;
 }
 
-#online-user-row{
-    padding: 20px;
+#user-col{
+    margin:10px;
+}
+#user-icon{
+    -webkit-transition: -webkit-transform .5s;
+    transition: transform .5s;
+}
+#user-icon:hover{
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
-#online-user-col{
-    padding:10px;
-}
-
-#button-battle-container{
-    background-color:grey;
+#buttons-container{
+    margin-top:50px;
 }

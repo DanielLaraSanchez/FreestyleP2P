@@ -8,6 +8,7 @@ import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 export class DataService {
 
 
+
   freestylers: User[] = [
     { Name: "Daniel",EmailAddress: "DanielLaraEdinburgh@hotmail.com", Password:"May", Points:20},
     { Name: "Jose",EmailAddress: "DanielLaraEdinburgh@hotmail.com", Password:"May", Points:20},
@@ -39,6 +40,19 @@ export class DataService {
     return this._http.post(`${this.URL}/User/addUser`, user)
   }
 
+
+  public logIn(user: User) {
+    return this._http.post(`${this.URL}/User/login/`, user)
+ 
+  }
+
+  public getUsers(){
+    return this._http.get(`${this.URL}/User/getUsers`)
+  }
+
+  public getUser(id: string){
+    return this._http.post(`${URL}/User/getUser`, id)
+  }
 
 
 
