@@ -14,6 +14,8 @@ export class PrivadoComponent implements OnInit {
   socket;
   pairedPeerWaiting = false;
   sender;
+  peerObject = {};
+  userDetails = JSON.parse(sessionStorage.getItem('userDetails'));
   constructor(public router: Router, public _webSocketService: WebsocketService) {
     this.socket = this._webSocketService.socket;
    }
@@ -21,7 +23,16 @@ export class PrivadoComponent implements OnInit {
  
   ngOnInit() {
     this.waitForInstructions();
+    this.setNickNameOnLogin();
     // this.readyToBattle();
+  }
+
+  setNickNameOnLogin(){
+    let userDetails = JSON.parse(sessionStorage.getItem('userDetails'));
+    let nickname: string = userDetails.name;
+
+    console.log(userDetails)
+    this.socket.emit('setnickname', nickname);
   }
 
    
@@ -33,17 +44,17 @@ export class PrivadoComponent implements OnInit {
   waitForInstructions() {
     this.socket.on('onOffer', (senderId) => {
       console.log('funciona on offer', senderId)
-      this.onOffer(this.socket);
+      this.onOffer(this.socket, this.userDetails);
     })
 
     this.socket.on('onSendOffer', (recieverId) => {
       console.log('funciona sendOffer', recieverId)
 
-      this.sendOffer(this.socket, recieverId, this._webSocketService);
+      this.sendOffer(this.socket, recieverId, this.userDetails);
     })
   }
 
-  onOffer(socket) {
+  onOffer(socket, userDetails) {
     let peerConnection = new RTCPeerConnection();
     let video = document.createElement('video');
     let div = document.getElementById('webCamCol1');
@@ -66,13 +77,13 @@ export class PrivadoComponent implements OnInit {
     }).catch(error => console.error(error));
 
     ///////////////////////////////////////////////////    var constraints = { audio: false, video: { width: 1280, height: 720 } };
-    socket.on('offer', function (id, description) {
+    socket.on('offer', function (id, description, peerUserDetails) {
       peerConnection.setRemoteDescription(description)
         .then(() => peerConnection.createAnswer())
         .then(sdp => peerConnection.setLocalDescription(sdp))
         .then(function () {
 
-          socket.emit('answer', id, peerConnection.localDescription);
+          socket.emit('answer', id, peerConnection.localDescription, userDetails);
         });
       let stream = video.srcObject;
 
@@ -89,6 +100,18 @@ export class PrivadoComponent implements OnInit {
           socket.emit('candidate', id, event.candidate);
         }
       };
+      let otherPeerWrapperDiv = document.getElementById('peerWrapper')
+      let otherPeerH3 = document.createElement('h3');
+      otherPeerH3.textContent = peerUserDetails.name;
+      otherPeerH3.style.color = 'white'
+      otherPeerWrapperDiv.appendChild(otherPeerH3)
+      let myWrapperDiv = document.getElementById('myWrapper')
+      let myH3 = document.createElement('h3');
+      myH3.textContent = userDetails.name;
+      myH3.style.color = 'white'
+      myWrapperDiv.appendChild(myH3)
+      this.peerObject = peerUserDetails;
+      console.log(peerUserDetails)
     })
 
     socket.on('candidate', function (id, candidate) {
@@ -120,7 +143,7 @@ export class PrivadoComponent implements OnInit {
 
 
   }
-  sendOffer(socket, recieverId, websocketService) {
+  sendOffer(socket, recieverId, userDetails) {
     let peerConnections = {};
     let peerConnection;
     let video = document.createElement('video');
@@ -144,8 +167,20 @@ export class PrivadoComponent implements OnInit {
         socket.emit('broadcaster');
       }).catch(error => console.error(error));
 
-      socket.on('answer', function (id, description) {
+      socket.on('answer', function (id, description, peerUserDetails) {
         peerConnections[id].setRemoteDescription(description);
+        this.peerObject = peerUserDetails;
+        let otherPeerWrapperDiv = document.getElementById('peerWrapper')
+        let otherPeerH3 = document.createElement('h3');
+        otherPeerH3.textContent = peerUserDetails.name;
+        otherPeerH3.style.color = 'white'
+        otherPeerWrapperDiv.appendChild(otherPeerH3)
+        let myWrapperDiv = document.getElementById('myWrapper')
+        let myH3 = document.createElement('h3');
+        myH3.textContent = userDetails.name;
+        myH3.style.color = 'white'
+        myWrapperDiv.appendChild(myH3)
+        console.log(peerUserDetails)
       });
 
 
@@ -157,7 +192,8 @@ export class PrivadoComponent implements OnInit {
           this.sender = peerConnection.addTrack(track, <MediaStream>stream)
         });
         peerConnection.createOffer().then(sdp => peerConnection.setLocalDescription(sdp)).then(function () {
-          socket.emit('offer', recieverId, peerConnection.localDescription);
+          console.log(userDetails)
+          socket.emit('offer', recieverId, peerConnection.localDescription, userDetails );
         });
         peerConnection.onicecandidate = function (event) {
           if (event.candidate) {
@@ -200,6 +236,20 @@ export class PrivadoComponent implements OnInit {
   readyToBattle() {
     this.socket.emit('readyToBattle', this._webSocketService.socket.id)
 
+  }
+
+  createNamesInPage(userDetails, peerUserDetails){
+    let otherPeerWrapperDiv = document.getElementById('peerWrapper')
+        let otherPeerH3 = document.createElement('h3');
+        otherPeerH3.textContent = peerUserDetails.name;
+        otherPeerH3.style.color = 'white'
+        otherPeerWrapperDiv.appendChild(otherPeerH3)
+        let myWrapperDiv = document.getElementById('myWrapper')
+        let myH3 = document.createElement('h3');
+        myH3.textContent = userDetails.name;
+        myH3.style.color = 'white'
+        myWrapperDiv.appendChild(myH3)
+        this.peerObject = peerUserDetails;
   }
 
 

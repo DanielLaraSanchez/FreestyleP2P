@@ -22,9 +22,9 @@ io.sockets.on('connection', function (socket) {
   let peer = new Peer();
   peer.socketid = socket.id;
   clients.push(peer);
-  for(let i = 0; i < 10;i++){
-    clients.push(peer);
-  }
+  // for(let i = 0; i < ;i++){
+  //   clients.push(peer);
+  // }
   socket.on('setnickname', function(nickname){
     setNickname(socket.id, nickname);
     socket.emit('getAllPeers', clients);
@@ -60,13 +60,13 @@ io.sockets.on('connection', function (socket) {
   socket.on('watcher', function () {
     socket.to(broadcaster).emit('watcher', socket.id);
   });
-  socket.on('offer', function (id /* of the watcher */, message) {
+  socket.on('offer', function (id /* of the watcher */, message, userDetails) {
     if (id != socket.id) {
-      socket.to(id).emit('offer', socket.id /* of the broadcaster */, message);
+      socket.to(id).emit('offer', socket.id /* of the broadcaster */, message, userDetails);
     }
   });
-  socket.on('answer', function (id /* of the broadcaster */, message) {
-    socket.to(id).emit('answer', socket.id /* of the watcher */, message);
+  socket.on('answer', function (id /* of the broadcaster */, message, userDetails) {
+    socket.to(id).emit('answer', socket.id /* of the watcher */, message, userDetails);
   });
   socket.on('candidate', function (id, message) {
     if (id != socket.id) {
@@ -101,6 +101,8 @@ io.sockets.on('connection', function (socket) {
 
   socket.on('bye', function (id) {
     console.log(id, "id on bye")
+    socket.broadcast.emit('getAllPeers', clients);
+
     broadcaster && socket.to(broadcaster).emit('bye', id);
     // socket.broadcast.emit('bye');
     Moderator.pairUpAfterDisconnection(activeConnections);
