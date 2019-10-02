@@ -6,6 +6,7 @@ const io = require('socket.io')(server);
 let Peermoderator = require('./moderator.js');
 let BattleConnection = require('./battleconnection.js');
 let Peer = require('./peer.js');
+let words = require("an-array-of-spanish-words");
 
 
 
@@ -15,8 +16,23 @@ let broadcaster;
 const clients = [];
 const activeConnections = [];
 let connectionsPairedUp = [];
+let wordsForBattle = [];
 
 
+function createWordsList(){
+  let array = [];
+  for(let i = 0; i < 10; i++){
+    let index = getRandomInt(words.length)
+    array.push(words[index])
+  }
+  return array;
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+createWordsList();
 
 io.sockets.on('connection', function (socket) {
   let peer = new Peer();
@@ -39,14 +55,16 @@ io.sockets.on('connection', function (socket) {
 
   socket.on('readyToBattle', function (socketid) {
     createConnections(socket.id);
-    ("funciona insidereadytobattle")
+    let wordsForPeer1 = createWordsList();
+    let wordsForPeer2 = createWordsList();
+    let words = {peer1: wordsForPeer1, peer2:wordsForPeer2}
     connectionsPairedUp = Moderator.getConnectionsPairedUp(activeConnections);
     let peerHasAPair = Moderator.checkIfPeerIsInSpecificConnection(connectionsPairedUp, socketid)
     if (connectionsPairedUp.length > 0 && peerHasAPair) {
       connectionsPairedUp.forEach((conn) => {
         if (conn.reciever === socketid || conn.sender === socketid) {
-          socket.to(conn.reciever).emit('onOffer', conn.sender);
-          socket.emit('onSendOffer', conn.reciever);
+          socket.to(conn.reciever).emit('onOffer', conn.sender, words);
+          socket.emit('onSendOffer', conn.reciever, words);
           // connectionsPairedUp.splice(connectionsPairedUp.indexOf(conn), 1);
         }
       });
@@ -67,6 +85,7 @@ io.sockets.on('connection', function (socket) {
   });
   socket.on('answer', function (id /* of the broadcaster */, message, userDetails) {
     socket.to(id).emit('answer', socket.id /* of the watcher */, message, userDetails);
+    
   });
   socket.on('candidate', function (id, message) {
     if (id != socket.id) {
@@ -142,8 +161,9 @@ function setNickname(socketid, nickname){
     }
   }
 }
+createWordsList()
 
-
+console.log(this.wordsForBattle, "words")
 
 
 server.listen(3000, () => {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { WebsocketService } from 'src/app/Services/websocket.service';
 
+
 @Component({
   selector: 'app-privado',
   templateUrl: './privado.component.html',
@@ -16,6 +17,7 @@ export class PrivadoComponent implements OnInit {
   sender;
   peerObject = {};
   userDetails = JSON.parse(sessionStorage.getItem('userDetails'));
+  words: string[];
   constructor(public router: Router, public _webSocketService: WebsocketService) {
     this.socket = this._webSocketService.socket;
    }
@@ -25,6 +27,7 @@ export class PrivadoComponent implements OnInit {
     this.waitForInstructions();
     this.setNickNameOnLogin();
     // this.readyToBattle();
+
   }
 
   setNickNameOnLogin(){
@@ -42,12 +45,15 @@ export class PrivadoComponent implements OnInit {
 
 
   waitForInstructions() {
-    this.socket.on('onOffer', (senderId) => {
+    this.socket.on('onOffer', (senderId, words) => {
+      console.log(words, "words")
+
       console.log('funciona on offer', senderId)
       this.onOffer(this.socket, this.userDetails);
     })
 
-    this.socket.on('onSendOffer', (recieverId) => {
+    this.socket.on('onSendOffer', (recieverId, words) => {
+      console.log(words, "words")
       console.log('funciona sendOffer', recieverId)
 
       this.sendOffer(this.socket, recieverId, this.userDetails);
