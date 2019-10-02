@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "BCrypt-Core/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.0/BCrypt-Core.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/BCrypt-Core.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -4735,6 +4744,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "BCrypt-Core": "2.0.0",
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.1.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.11"
@@ -4749,6 +4759,18 @@
     }
   },
   "libraries": {
+    "BCrypt-Core/2.0.0": {
+      "sha512": "g6CJ6ixfOjyLkyuQIQn61Isb4ee+0Q0eqsNn0fHB+s5kbChNU9zETXafDD83SN+1eU/QWPSL5f2lTM0PG9mGVg==",
+      "type": "package",
+      "path": "bcrypt-core/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt-core.2.0.0.nupkg.sha512",
+        "bcrypt-core.nuspec",
+        "lib/netcoreapp2.0/BCrypt-Core.dll"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "owAlEIUZXWSnkK8Z1c+zR47A0X6ykF4XjbPok4lQKNuciUfHLGPd6QnI+rt/8KlQ17PmF+I4S3f+m+Qe4IvViw==",
       "type": "package",
@@ -12854,11 +12876,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\API\\API.csproj",
+      "projectUniqueName": "C:\\CranewareRepositoriesALL\\PersonalDevelopment\\CoachingWithAlvin\\FreestyleP2P\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\API\\API.csproj",
+      "projectPath": "C:\\CranewareRepositoriesALL\\PersonalDevelopment\\CoachingWithAlvin\\FreestyleP2P\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Daniel Lara\\.nuget\\packages\\",
-      "outputPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\API\\obj\\",
+      "outputPath": "C:\\CranewareRepositoriesALL\\PersonalDevelopment\\CoachingWithAlvin\\FreestyleP2P\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12871,14 +12893,19 @@
         "netcoreapp2.2"
       ],
       "sources": {
+        "C:\\": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "\\\\pse-build01\\wwwroot\\nuget-repo-dev\\Packages": {},
+        "\\\\pse-build01\\wwwroot\\nuget-repo\\Packages": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://tfs:444/tfs/Common/_packaging/TrisusNuget/nuget/v3/index.json": {},
+        "https://www.nuget.org/api/v2": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj"
+            "C:\\CranewareRepositoriesALL\\PersonalDevelopment\\CoachingWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\CranewareRepositoriesALL\\PersonalDevelopment\\CoachingWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

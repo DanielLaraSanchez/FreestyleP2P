@@ -25,6 +25,7 @@ export class SignupComponent implements OnInit {
     Validators.required
   ]);
 
+
   nameFormControl = new FormControl('', [
     Validators.required
   ]);

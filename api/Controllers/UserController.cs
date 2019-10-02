@@ -69,7 +69,7 @@ namespace API.Controllers
         [HttpPost("login")]
         public async Task<ActionResult> Login(UserRequest user)
         {
-            User foundUser =await _repository.Login(user.EmailAddress, user.Password);
+            User foundUser = await _repository.Login(user.EmailAddress, user.Password);
             
             return Ok(foundUser);
         }

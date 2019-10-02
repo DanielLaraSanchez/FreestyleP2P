@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Infrastructure.DataLayer.Entities;
 using Infrastructure.DataLayer.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using BCrypt;
 
 namespace Infrastructure.DataLayer
 {
@@ -20,6 +21,8 @@ namespace Infrastructure.DataLayer
         }
         public async Task<User> AddUser(string name, string emailAddress, string password)
         {
+            var salt = BCryptHelper.GenerateSalt(12);
+            var hashedPassword = BCryptHelper.HashPassword(password, salt);
             User user = null;
             if(!_context.Users.Any(x => x.EmailAddress == emailAddress))
             {
@@ -27,7 +30,7 @@ namespace Infrastructure.DataLayer
                 {
                     Name = name,
                     EmailAddress = emailAddress,
-                    Password = password
+                    Password = hashedPassword
                 };
 
                 await _context.Users.AddAsync(user);
@@ -60,11 +63,13 @@ namespace Infrastructure.DataLayer
         public async Task<User> Login(string email, string password)
         {
             User user = null;
+
             try
             {
-                user = await _context.Users.Where(x => x.EmailAddress == email).Where(x => x.Password == password).FirstOrDefaultAsync(); //or SingleAsync
+                user = await _context.Users.Where(x => x.EmailAddress == email).FirstOrDefaultAsync(); //or SingleAsync
+                bool isPasswordCorrect = BCrypt.BCryptHelper.CheckPassword(password, user.Password);
 
-                if (user.EmailAddress != null)
+                if (user.EmailAddress != null && isPasswordCorrect)
                 {
                     return user;
                 }

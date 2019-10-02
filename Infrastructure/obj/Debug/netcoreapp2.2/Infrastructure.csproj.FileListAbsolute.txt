@@ -15,3 +15,10 @@ C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\
 C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.csproj.CopyComplete
 C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.dll
 C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.pdb
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\Infrastructure\bin\Debug\netcoreapp2.2\Infrastructure.pdb
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\Infrastructure\bin\Debug\netcoreapp2.2\Domain.dll
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\Infrastructure\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.csprojAssemblyReference.cache
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.csproj.CopyComplete
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.dll
+C:\CranewareRepositoriesALL\PersonalDevelopment\CoachingWithAlvin\FreestyleP2P\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.pdb
