@@ -17,7 +17,8 @@ export class PrivadoComponent implements OnInit {
   sender;
   peerObject = {};
   userDetails = JSON.parse(sessionStorage.getItem('userDetails'));
-  words: string[];
+  words;
+  isConnected: boolean = false;
   constructor(public router: Router, public _webSocketService: WebsocketService) {
     this.socket = this._webSocketService.socket;
    }
@@ -43,16 +44,38 @@ export class PrivadoComponent implements OnInit {
     this.router.navigate([''])
   }
 
+  putWordsInPage(words){
+    var text = words;
+var counter = 0;
+var elem = document.getElementById("changeText");
+var inst = setInterval(change, 10000);
+
+function change() {
+  elem.innerHTML = text[counter];
+  counter++;
+  if (counter >= text.length) {
+    counter = 0;
+    clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+  }
+}
+}
+
 
   waitForInstructions() {
     this.socket.on('onOffer', (senderId, words) => {
+      this.words = words;
+      this.putWordsInPage(words.peer1)
       console.log(words, "words")
-
+      this.isConnected = true;
       console.log('funciona on offer', senderId)
       this.onOffer(this.socket, this.userDetails);
     })
 
     this.socket.on('onSendOffer', (recieverId, words) => {
+      this.words = words;
+      this.putWordsInPage(words.peer2)
+      this.isConnected = true;
+
       console.log(words, "words")
       console.log('funciona sendOffer', recieverId)
 
@@ -154,14 +177,14 @@ export class PrivadoComponent implements OnInit {
     let peerConnection;
     let video = document.createElement('video');
     let div = document.getElementById('webCamCol1');
-    video.height = 390;
-    video.width = 425;
+    video.height = 400;
+    video.width = 400;
     video.style.objectFit = "cover";
     div.appendChild(video);
     ///////////////////////////////////////
     let videoOtherPeer = document.createElement('video');
-    videoOtherPeer.height = 390;
-    videoOtherPeer.width = 425;
+    videoOtherPeer.height = 400;
+    videoOtherPeer.width = 400;
     videoOtherPeer.style.objectFit = "cover";
     let videoOtherPeerDiv = document.getElementById('webCamCol2');
     videoOtherPeerDiv.appendChild(videoOtherPeer);
@@ -240,7 +263,8 @@ export class PrivadoComponent implements OnInit {
 
 
   readyToBattle() {
-    this.socket.emit('readyToBattle', this._webSocketService.socket.id)
+    this.socket.emit('readyToBattle', this._webSocketService.socket.id);
+
 
   }
 

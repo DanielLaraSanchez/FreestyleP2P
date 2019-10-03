@@ -10,7 +10,14 @@
           </div>
           <div class="col-lg-2 text-center" id="webCamCol1"></div>
         </div>
+       
+          <div *ngIf="this.isConnected" id="menuWrapper" class="text-center">
+            
+            <div class="col-lg-2 text-center" id="menuCol">
 
+            </div>
+            </div>
+          
 
         <div>
         <div id="myWrapper"  class="text-center">
@@ -20,9 +27,20 @@
 
 
       </div>
-      <button (click)="nextPage()">go to login</button>
-      <button (click)="readyToBattle()">ready to battle</button>
 
+    </div>
+
+    <div class="col-lg-12" id="menuWrapperCol">
+      <div class="row justify-content-center">
+        <div class="col-lg-2 text-center" id="menuCol">
+          <div *ngIf="!this.isConnected">
+            <button mat-fab color="warn" (click)="readyToBattle()" >Fight!</button>
+  
+          </div>
+          <p style="color:white;" id="changeText"></p>
+
+        </div>
+      </div>
     </div>
   </div>
 

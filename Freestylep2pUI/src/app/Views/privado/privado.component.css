@@ -50,3 +50,19 @@ height:50%;
 
 
 }
+
+
+#menuWrapperCol{
+    bottom:0;
+    position:fixed;
+    margin-bottom:30px;
+}
+#menuCol{
+    margin-right:-30px;
+    background-color: rgba(29, 4, 29, 0.7);
+
+    /* background-color:lightgrey; */
+    height:100px;
+    width:400px;
+    border-radius: 5%;
+}
