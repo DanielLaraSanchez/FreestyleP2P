@@ -1,0 +1,8 @@
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Presentation\bin\Debug\netcoreapp2.2\Presentation.deps.json
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Presentation\bin\Debug\netcoreapp2.2\Presentation.runtimeconfig.json
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Presentation\bin\Debug\netcoreapp2.2\Presentation.runtimeconfig.dev.json
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Presentation\bin\Debug\netcoreapp2.2\Presentation.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Presentation\obj\Debug\netcoreapp2.2\Presentation.csprojAssemblyReference.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Presentation\obj\Debug\netcoreapp2.2\Presentation.csproj.CoreCompileInputs.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Presentation\obj\Debug\netcoreapp2.2\Presentation.AssemblyInfoInputs.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Presentation\obj\Debug\netcoreapp2.2\Presentation.AssemblyInfo.cs

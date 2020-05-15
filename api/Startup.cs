@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using API.DataLayer;
+using API.DataLayer.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Microsoft.AspNetCore.SpaServices.AngularCli;
-using Infrastructure.DataLayer;
-using Microsoft.EntityFrameworkCore;
-using Infrastructure.DataLayer.Interfaces;
 
 
 
@@ -38,7 +31,7 @@ namespace API
 
             services.AddSpaStaticFiles(c =>
             {
-                c.RootPath = "Freestylep2pUI/dist";
+                c.RootPath = ".\\wwwwroot\\Client\\";
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

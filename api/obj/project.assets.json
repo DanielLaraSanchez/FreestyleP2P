@@ -4729,32 +4729,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
-      },
-      "Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "compile": {
-          "bin/placeholder/Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Domain.dll": {}
-        }
-      },
-      "Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "dependencies": {
-          "BCrypt-Core": "2.0.0",
-          "Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "2.1.11",
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.11"
-        },
-        "compile": {
-          "bin/placeholder/Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Infrastructure.dll": {}
-        }
       }
     }
   },
@@ -12847,21 +12821,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
-    },
-    "Domain/1.0.0": {
-      "type": "project",
-      "path": "../Domain/Domain.csproj",
-      "msbuildProject": "../Domain/Domain.csproj"
-    },
-    "Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../Infrastructure/Infrastructure.csproj",
-      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "Infrastructure >= 1.0.0",
+      "BCrypt-Core >= 2.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.EntityFrameworkCore >= 2.2.0",
@@ -12876,11 +12840,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\API\\API.csproj",
+      "projectUniqueName": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\API\\API.csproj",
+      "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Daniel Lara\\.nuget\\packages\\",
-      "outputPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\API\\obj\\",
+      "outputPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12898,11 +12862,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {
-            "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -12914,6 +12874,10 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
+          "BCrypt-Core": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",

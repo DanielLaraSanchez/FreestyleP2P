@@ -16,3 +16,11 @@ C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debu
 C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debug\netcoreapp2.2\Domain.dll
 C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debug\netcoreapp2.2\Domain.pdb
 C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Domain\obj\Debug\netcoreapp2.2\Domain.csprojAssemblyReference.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Domain\bin\Debug\netcoreapp2.2\Domain.deps.json
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Domain\bin\Debug\netcoreapp2.2\Domain.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Domain\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Domain\obj\Debug\netcoreapp2.2\Domain.csproj.CoreCompileInputs.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfoInputs.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfo.cs
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Domain\obj\Debug\netcoreapp2.2\Domain.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\Domain\obj\Debug\netcoreapp2.2\Domain.pdb

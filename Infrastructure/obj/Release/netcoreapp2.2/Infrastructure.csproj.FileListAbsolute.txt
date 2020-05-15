@@ -1,0 +1,12 @@
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\bin\Release\netcoreapp2.2\Infrastructure.deps.json
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\bin\Release\netcoreapp2.2\Infrastructure.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\bin\Release\netcoreapp2.2\Infrastructure.pdb
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\bin\Release\netcoreapp2.2\Domain.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\bin\Release\netcoreapp2.2\Domain.pdb
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\obj\Release\netcoreapp2.2\Infrastructure.csprojAssemblyReference.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\obj\Release\netcoreapp2.2\Infrastructure.csproj.CoreCompileInputs.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\obj\Release\netcoreapp2.2\Infrastructure.AssemblyInfoInputs.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\obj\Release\netcoreapp2.2\Infrastructure.AssemblyInfo.cs
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\obj\Release\netcoreapp2.2\Infrastructure.csproj.CopyComplete
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\obj\Release\netcoreapp2.2\Infrastructure.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\Infrastructure\obj\Release\netcoreapp2.2\Infrastructure.pdb

@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\Domain.csproj",
+      "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Daniel Lara\\.nuget\\packages\\",
-      "outputPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\obj\\",
+      "outputPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

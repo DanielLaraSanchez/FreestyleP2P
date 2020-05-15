@@ -1,0 +1,33 @@
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\bin\Release\netcoreapp2.2\API.deps.json
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\bin\Release\netcoreapp2.2\API.runtimeconfig.json
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\bin\Release\netcoreapp2.2\API.runtimeconfig.dev.json
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\bin\Release\netcoreapp2.2\API.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\bin\Release\netcoreapp2.2\API.pdb
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\bin\Release\netcoreapp2.2\Domain.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\bin\Release\netcoreapp2.2\Infrastructure.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\bin\Release\netcoreapp2.2\Infrastructure.pdb
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\bin\Release\netcoreapp2.2\Domain.pdb
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\obj\Release\netcoreapp2.2\API.csprojAssemblyReference.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\obj\Release\netcoreapp2.2\API.csproj.CoreCompileInputs.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\obj\Release\netcoreapp2.2\API.RazorAssemblyInfo.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\obj\Release\netcoreapp2.2\API.RazorAssemblyInfo.cs
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\obj\Release\netcoreapp2.2\API.AssemblyInfoInputs.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\obj\Release\netcoreapp2.2\API.AssemblyInfo.cs
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\obj\Release\netcoreapp2.2\API.RazorTargetAssemblyInfo.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\obj\Release\netcoreapp2.2\API.csproj.CopyComplete
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\obj\Release\netcoreapp2.2\API.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P\API\obj\Release\netcoreapp2.2\API.pdb
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\API\bin\Release\netcoreapp2.2\API.deps.json
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\API\bin\Release\netcoreapp2.2\API.runtimeconfig.json
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\API\bin\Release\netcoreapp2.2\API.runtimeconfig.dev.json
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\API\bin\Release\netcoreapp2.2\API.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\API\bin\Release\netcoreapp2.2\API.pdb
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\API\obj\Release\netcoreapp2.2\API.csprojAssemblyReference.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\API\obj\Release\netcoreapp2.2\API.csproj.CoreCompileInputs.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\API\obj\Release\netcoreapp2.2\API.RazorAssemblyInfo.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\API\obj\Release\netcoreapp2.2\API.RazorAssemblyInfo.cs
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\API\obj\Release\netcoreapp2.2\API.AssemblyInfoInputs.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\API\obj\Release\netcoreapp2.2\API.AssemblyInfo.cs
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\API\obj\Release\netcoreapp2.2\API.RazorTargetAssemblyInfo.cache
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\API\obj\Release\netcoreapp2.2\API.dll
+C:\SoftwareDevelopment\P2P\CoachingProjectWithAlvin\FreestyleP2P - Copy\API\obj\Release\netcoreapp2.2\API.pdb

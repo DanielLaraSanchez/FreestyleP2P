@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using API.Requests;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Infrastructure.DataLayer.Interfaces;
-using Infrastructure.DataLayer.Entities;
-using API.Requests;
+using System.Threading.Tasks;
+using API.DataLayer.Interfaces;
+using API.DataLayer.Entities;
 
 namespace API.Controllers
 {
@@ -35,6 +32,14 @@ namespace API.Controllers
             var user = await _repository.Get(id);
             return new OkObjectResult(user);
         }
+
+        // GET: api/User/5
+        [HttpGet(Name = "Connect")]
+        public async Task<ActionResult> Connect()
+        {
+            return new OkObjectResult("connected");
+        }
+
 
         // POST: api/User
         [HttpPost("addUser")]

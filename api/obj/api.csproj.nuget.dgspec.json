@@ -1,92 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\API\\API.csproj": {}
+    "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\API\\API.csproj": {
+    "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\API\\API.csproj",
+        "projectUniqueName": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\API\\API.csproj",
+        "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Daniel Lara\\.nuget\\packages\\",
-        "outputPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\API\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Daniel Lara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp2.2"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp2.2": {
-            "projectReferences": {
-              "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp2.2": {
-          "dependencies": {
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[2.1.9, )"
-            }
-          },
-          "imports": [
-            "net461"
-          ],
-          "assetTargetFallback": true,
-          "warn": true
-        }
-      }
-    },
-    "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Daniel Lara\\.nuget\\packages\\",
-        "outputPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\obj\\",
+        "outputPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -116,79 +41,34 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "net461"
-          ],
-          "assetTargetFallback": true,
-          "warn": true
-        }
-      }
-    },
-    "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj",
-        "projectName": "Infrastructure",
-        "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Daniel Lara\\.nuget\\packages\\",
-        "outputPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Daniel Lara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp2.2"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp2.2": {
-            "projectReferences": {
-              "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp2.2": {
-          "dependencies": {
             "BCrypt-Core": {
               "target": "Package",
               "version": "[2.0.0, )"
             },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[2.1.11, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[2.1.11, )"
+              "version": "[2.2.0, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.9, )"
             }
           },
           "imports": [

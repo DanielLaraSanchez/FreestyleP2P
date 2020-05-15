@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\Domain.csproj": {
+    "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\Domain.csproj",
+        "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Daniel Lara\\.nuget\\packages\\",
-        "outputPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\obj\\",
+        "outputPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -56,14 +56,14 @@
         }
       }
     },
-    "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Daniel Lara\\.nuget\\packages\\",
-        "outputPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Infrastructure\\obj\\",
+        "outputPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -82,8 +82,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P\\Domain\\Domain.csproj"
+              "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\SoftwareDevelopment\\P2P\\CoachingProjectWithAlvin\\FreestyleP2P - Copy\\Domain\\Domain.csproj"
               }
             }
           }

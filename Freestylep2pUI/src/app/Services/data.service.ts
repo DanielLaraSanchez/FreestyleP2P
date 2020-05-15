@@ -31,7 +31,7 @@ export class DataService {
     
   ]
 
-  readonly URL: string = 'https://localhost:44371/api';
+  readonly URL: string = 'https://batallademcs.azurewebsites.net/api';
 
   constructor(public _http: HttpClient) { }
 
